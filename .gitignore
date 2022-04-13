@@ -1,0 +1,23 @@
+.idea
+.vscode
+*/.DS_Store
+static/uploadfile
+main.exe
+coinhook
+temp/
+!temp
+vendor
+config/settings.dev.yml
+coinhook.exe
+common/middleware/demo.go
+config/settings.dev.*.yml.log
+temp/logs
+config/settings.dev.yml.log
+config/settings.yml
+cmd/migrate/migration/version-local/*
+!cmd/migrate/migration/version-local/doc.go
+*/.DS_Store
+
+# go sum
+go.sum
+config/settings.deva.yml
