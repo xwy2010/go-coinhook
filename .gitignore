@@ -7,10 +7,9 @@ coinhook
 temp/
 !temp
 vendor
-config/settings.dev.yml
+config/conf.toml
 coinhook.exe
-common/middleware/demo.go
-config/settings.dev.*.yml.log
+
 temp/logs
 config/settings.dev.yml.log
 config/settings.yml

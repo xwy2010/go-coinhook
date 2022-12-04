@@ -1,0 +1,140 @@
+basePath: /v1
+definitions:
+  model.Companys:
+    properties:
+      address:
+        type: string
+      agent:
+        type: string
+      agent_phone:
+        type: string
+      attorney:
+        type: string
+      authorization_img_uri:
+        type: string
+      background:
+        type: string
+      balance:
+        type: integer
+      company_abbreviations:
+        type: string
+      company_bussiness:
+        type: string
+      company_code:
+        type: string
+      company_name:
+        type: string
+      company_phonenum:
+        type: string
+      company_type:
+        type: integer
+      contact_name:
+        type: string
+      contact_phonenum:
+        type: string
+      description:
+        type: string
+      employee_count:
+        type: integer
+      financing:
+        type: integer
+      have_reward:
+        type: integer
+      id:
+        type: integer
+      industry:
+        type: integer
+      invite_code:
+        type: string
+      invite_reward:
+        type: integer
+      is_realname:
+        type: integer
+      last_login_timestamp:
+        type: integer
+      legalperson:
+        type: string
+      licence_img_uri:
+        type: string
+      login_mail:
+        type: string
+      login_name:
+        type: string
+      logo_uri:
+        type: string
+      major_link:
+        type: string
+      organization_code:
+        type: string
+      paper_count:
+        type: integer
+      password:
+        type: string
+      register_timestamp:
+        type: integer
+      smtp_password:
+        type: string
+      smtp_port:
+        type: string
+      smtp_server:
+        type: string
+      smtp_username:
+        type: string
+      status:
+        type: integer
+      subscibe_mail:
+        type: integer
+      tmp_company_name:
+        type: string
+      use_smtp_default:
+        type: integer
+      validate_timestamp:
+        type: integer
+      website:
+        type: string
+    required:
+    - balance
+    - company_code
+    - company_name
+    - password
+    type: object
+host: localhost:1234
+info:
+  contact:
+    email: wenyu.xu@hrforce.cn
+    name: Xuwenyu
+    url: https://www.hrforce.cn
+  description: 后台管理.
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+  title: HRforce后台API
+  version: "1.0"
+paths:
+  /B/AddUser:
+    post:
+      description: 根据提交的信息创建用户
+      parameters:
+      - description: 需要上传的JSON
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/model.Companys'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: code：0 创建用户成功
+          schema:
+            type: string
+        "400":
+          description: code：-1 参数错误； code：-2 身份校验失败
+          schema:
+            type: string
+      summary: 创建用户
+      tags:
+      - Company
+schemes:
+- https
+swagger: "2.0"
